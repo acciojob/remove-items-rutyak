@@ -2,6 +2,12 @@
 function handleRemove(){
 
     const colorSelector = document.getElementById('colorSelect');
+    const selectedIndex = colorSelector.selectedIndex;  // selected Index
 
-    colorSelector.selectedIndex = 0;
+    if(selectedIndex !== -1){
+
+        colorSelector.remove(selectedIndex);
+
+        selectedIndex = 0; // reset
+    }
 }
